@@ -16,7 +16,7 @@ struct View_1: View {
         ZStack{
             VStack(spacing: 0) {
                 Spacer()
-                    .frame(height: 156)
+                    .frame(height: 158)
                 HStack {
                     Text("이름을 입력해주세요")
                         .font(.system(size: 32, weight: .semibold))
@@ -45,7 +45,7 @@ struct View_1: View {
                        //UserDefaults 삽입
                     }
                 Spacer()
-                    .frame(height: 53)
+                    .frame(height: 52)
             }
         }
         .ignoresSafeArea()

@@ -10,6 +10,8 @@ import SwiftUI
 struct View_2: View {
     
     @State private var date = Date()
+    @State var userInformation: UserInformation
+    @State var viewController: ViewController
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -26,16 +28,17 @@ struct View_2: View {
                 .foregroundColor(Color(hex: 0x48484A))
             Spacer()
             
-            DatePicker("date", selection: $date, displayedComponents: .date)
+            DatePicker("date", selection: $date, in: Date()..., displayedComponents: .date)
                 .datePickerStyle(GraphicalDatePickerStyle())
-                .frame(width: 330)
+                .frame(width: 330, height: 355)
                 .accentColor(Color(hex: 0x139460))
                 .environment(\.locale, Locale.init(identifier: "ko"))
             Spacer()
             
             NextButtonView(viewCount: 2)
                 .onTapGesture {
-                    
+                    userInformation.date = date
+                    viewController.currentPage += 1
                 }
             Spacer()
                 .frame(height:52)
@@ -48,6 +51,6 @@ struct View_2: View {
 
 struct View_2_Previews: PreviewProvider {
     static var previews: some View {
-        View_2()
+        View_2(userInformation: UserInformation(), viewController: ViewController())
     }
 }

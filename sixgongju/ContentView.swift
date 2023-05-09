@@ -19,14 +19,14 @@ struct ContentView: View {
             case 1:
                 View_1(userInformation: userInformation, viewController: viewController)
             case 2:
-                View_2()
+                View_2(userInformation: userInformation, viewController: viewController)
             case 3:
                 View_3(userInformation: userInformation, viewController: viewController)
             case 4:
-                View_4()
+                View_4(userInformation: userInformation, viewController: viewController)
                 
             default:
-                Text("dd")
+                LocalDataView(userInformation: userInformation, viewController: viewController)
             }
             
             

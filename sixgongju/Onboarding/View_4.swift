@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct View_4: View {
+    
+    @State private var  currentLine :[CGPoint] = []
+    @State private var lines : [[CGPoint]] = []
+    @State var userInformation: UserInformation
+    @State var viewController: ViewController
+    
     var body: some View {
         VStack(alignment: .leading, spacing:0){
             Spacer()
@@ -29,10 +35,33 @@ struct View_4: View {
             
             //Sign
             ZStack{
-                Rectangle()
+                
+                VStack{
+                    Canvas{ context, size in
+                        for line in lines {
+                            var path = Path()
+                            path.addLines(line)
+                            context.stroke(path, with: .color(Color.black), lineWidth: 1)
+                        }
+                            
+                        
+                    }.gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
+                        .onChanged{value in
+                            let newPoint = value.location
+                            currentLine.append(newPoint)
+                            self.lines.append(currentLine)
+                        }
+                        .onEnded ({value in
+                            self.lines.append(currentLine)
+                            self.currentLine = []
+                        })
+                    )
+                  
+                }
                     .frame(width: 330, height: 219)
+                    
+                    .background(Color(hex:0xf5f5f5))
                     .cornerRadius(24)
-                    .foregroundColor(Color(hex:0xf5f5f5))
                     .shadow(color: Color(hex: 0xD1D1D6), radius: 2, x: 0, y: 2)
                     .overlay(
                         ZStack{
@@ -52,6 +81,7 @@ struct View_4: View {
                                 HStack{
                                     Spacer()
                                     Button("지우기"){
+                                        lines = []
                                     }.font(.system(size: 18))
                                      .foregroundColor(Color(hex:0x139460)).padding(EdgeInsets(top: 0, leading: 0, bottom: 22, trailing: 22))
                                 }
@@ -66,14 +96,20 @@ struct View_4: View {
             Text("위 화면에 서명을 입력하세요")
                 .font(.system(size: 16))
                 .foregroundColor(Color(hex:0x636366))
-            Spacer()
-                .frame(height: 112)
+                .padding(.bottom, 101.5)
+//            Spacer()
+//                .frame(height: 10)
                 
             //Button
             NextButtonView(viewCount: 4)
                 .onTapGesture {
+                    userInformation.sign = lines
                     viewController.currentPage += 1
                 }
+            Spacer()
+//            Spacer()
+//                .frame(width: 52)
+           
     
             
         }.ignoresSafeArea()
@@ -82,6 +118,6 @@ struct View_4: View {
 
 struct View_4_Previews: PreviewProvider {
     static var previews: some View {
-        View_4()
+        View_4(userInformation: UserInformation(), viewController: ViewController())
     }
 }

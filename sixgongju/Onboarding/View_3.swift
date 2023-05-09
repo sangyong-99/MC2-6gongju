@@ -17,7 +17,7 @@ struct View_3: View {
         ZStack {
             VStack(spacing: 0){
                 Spacer()
-                    .frame(height: 150) //가장위에 레이아웃
+                    .frame(height: 158) //가장위에 레이아웃
                 HStack{
                     
                     Text("받고싶은 은퇴 선물의 \n이미지를 넣어주세요")
@@ -48,7 +48,7 @@ struct View_3: View {
                        //UserDefaults 삽입
                     }
                 Spacer()
-                    .frame(height: 53)
+                    .frame(height: 52)
                     
             }
         }

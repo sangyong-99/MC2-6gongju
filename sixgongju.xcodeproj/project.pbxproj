@@ -20,6 +20,7 @@
 		5ED328212A09DF030028DE61 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED328202A09DF030028DE61 /* ImagePicker.swift */; };
 		5ED328232A09DF8B0028DE61 /* View_4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED328222A09DF8B0028DE61 /* View_4.swift */; };
 		5ED328252A09DF990028DE61 /* View_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED328242A09DF990028DE61 /* View_2.swift */; };
+		5ED328272A09F4C30028DE61 /* LocalDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED328262A09F4C30028DE61 /* LocalDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		5ED328202A09DF030028DE61 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5ED328222A09DF8B0028DE61 /* View_4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_4.swift; sourceTree = "<group>"; };
 		5ED328242A09DF990028DE61 /* View_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_2.swift; sourceTree = "<group>"; };
+		5ED328262A09F4C30028DE61 /* LocalDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				5ED328162A09DE960028DE61 /* View_1.swift */,
 				5ED328182A09DEAD0028DE61 /* View_3.swift */,
 				5ED328222A09DF8B0028DE61 /* View_4.swift */,
+				5ED328262A09F4C30028DE61 /* LocalDataView.swift */,
 				5ED328242A09DF990028DE61 /* View_2.swift */,
 			);
 			path = Onboarding;
@@ -206,6 +209,7 @@
 				5ED328122A09DE3C0028DE61 /* ModelData.swift in Sources */,
 				5ED328142A09DE4D0028DE61 /* Color_extension.swift in Sources */,
 				5ED328172A09DE960028DE61 /* View_1.swift in Sources */,
+				5ED328272A09F4C30028DE61 /* LocalDataView.swift in Sources */,
 				5ED328232A09DF8B0028DE61 /* View_4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
