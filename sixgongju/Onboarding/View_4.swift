@@ -57,10 +57,8 @@ struct View_4: View {
                             self.currentLine = []
                         })
                     )
-                  
                 }
                     .frame(width: 330, height: 219)
-                    
                     .background(Color(hex:0xf5f5f5))
                     .cornerRadius(24)
                     .shadow(color: Color(hex: 0xD1D1D6), radius: 2, x: 0, y: 2)
