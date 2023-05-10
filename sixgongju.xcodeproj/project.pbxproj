@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5ECBF4B62A0B23ED00652631 /* DataUserDefaultsSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBF4B52A0B23ED00652631 /* DataUserDefaultsSave.swift */; };
+		5ECBF4B82A0B253A00652631 /* UserDefaultsDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBF4B72A0B253A00652631 /* UserDefaultsDataView.swift */; };
+		5ECBF4BA2A0B25C400652631 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBF4B92A0B25C400652631 /* Database.swift */; };
 		5ED327EE2A09DDAE0028DE61 /* sixgongjuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED327ED2A09DDAE0028DE61 /* sixgongjuApp.swift */; };
 		5ED327F02A09DDAE0028DE61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED327EF2A09DDAE0028DE61 /* ContentView.swift */; };
 		5ED327F22A09DDAE0028DE61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ED327F12A09DDAE0028DE61 /* Assets.xcassets */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5ECBF4B52A0B23ED00652631 /* DataUserDefaultsSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUserDefaultsSave.swift; sourceTree = "<group>"; };
+		5ECBF4B72A0B253A00652631 /* UserDefaultsDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDataView.swift; sourceTree = "<group>"; };
+		5ECBF4B92A0B25C400652631 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		5ED327EA2A09DDAE0028DE61 /* sixgongju.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sixgongju.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED327ED2A09DDAE0028DE61 /* sixgongjuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sixgongjuApp.swift; sourceTree = "<group>"; };
 		5ED327EF2A09DDAE0028DE61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 			children = (
 				5ED328112A09DE3C0028DE61 /* ModelData.swift */,
 				5ED328132A09DE4D0028DE61 /* Color_extension.swift */,
+				5ECBF4B92A0B25C400652631 /* Database.swift */,
 			);
 			path = Data_extension;
 			sourceTree = "<group>";
@@ -104,10 +111,11 @@
 				5ED3281F2A09DEF10028DE61 /* Function */,
 				5ED3281A2A09DEBE0028DE61 /* ViewFunction */,
 				5ED328162A09DE960028DE61 /* View_1.swift */,
+				5ED328242A09DF990028DE61 /* View_2.swift */,
 				5ED328182A09DEAD0028DE61 /* View_3.swift */,
 				5ED328222A09DF8B0028DE61 /* View_4.swift */,
 				5ED328262A09F4C30028DE61 /* LocalDataView.swift */,
-				5ED328242A09DF990028DE61 /* View_2.swift */,
+				5ECBF4B72A0B253A00652631 /* UserDefaultsDataView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -125,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				5ED328202A09DF030028DE61 /* ImagePicker.swift */,
+				5ECBF4B52A0B23ED00652631 /* DataUserDefaultsSave.swift */,
 			);
 			path = Function;
 			sourceTree = "<group>";
@@ -202,13 +211,16 @@
 				5ED327F02A09DDAE0028DE61 /* ContentView.swift in Sources */,
 				5ED327EE2A09DDAE0028DE61 /* sixgongjuApp.swift in Sources */,
 				5ED328192A09DEAD0028DE61 /* View_3.swift in Sources */,
+				5ECBF4BA2A0B25C400652631 /* Database.swift in Sources */,
 				5ED328212A09DF030028DE61 /* ImagePicker.swift in Sources */,
 				5ED3281C2A09DECB0028DE61 /* NextButtonView.swift in Sources */,
+				5ECBF4B62A0B23ED00652631 /* DataUserDefaultsSave.swift in Sources */,
 				5ED3281E2A09DEE70028DE61 /* ImagePickerView.swift in Sources */,
 				5ED328252A09DF990028DE61 /* View_2.swift in Sources */,
 				5ED328122A09DE3C0028DE61 /* ModelData.swift in Sources */,
 				5ED328142A09DE4D0028DE61 /* Color_extension.swift in Sources */,
 				5ED328172A09DE960028DE61 /* View_1.swift in Sources */,
+				5ECBF4B82A0B253A00652631 /* UserDefaultsDataView.swift in Sources */,
 				5ED328272A09F4C30028DE61 /* LocalDataView.swift in Sources */,
 				5ED328232A09DF8B0028DE61 /* View_4.swift in Sources */,
 			);

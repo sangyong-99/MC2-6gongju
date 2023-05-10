@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var viewController: ViewController = ViewController()
     @StateObject var userInformation: UserInformation = UserInformation()
-    @StateObject var questiondata: QuestionData = QuestionData()
+    @StateObject var questionData: QuestionData = QuestionData()
     var body: some View {
         VStack {
             
@@ -23,10 +23,10 @@ struct ContentView: View {
             case 3:
                 View_3(userInformation: userInformation, viewController: viewController)
             case 4:
-                View_4(userInformation: userInformation, viewController: viewController)
+                View_4(userInformation: userInformation, viewController: viewController, questionData: questionData)
                 
             default:
-                LocalDataView(userInformation: userInformation, viewController: viewController)
+                UserDefaultsDataView()
             }
             
             

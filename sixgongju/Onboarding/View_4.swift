@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct View_4: View {
-    
+    let dbHelper = DBHelper.shared
     @State private var  currentLine :[CGPoint] = []
     @State private var lines : [[CGPoint]] = []
     @State var userInformation: UserInformation
     @State var viewController: ViewController
+    @State var questionData: QuestionData
     
     var body: some View {
         VStack(alignment: .leading, spacing:0){
@@ -105,6 +106,13 @@ struct View_4: View {
                 .onTapGesture {
                     userInformation.sign = lines
                     viewController.currentPage += 1
+                    DataUserDefaultsSave(userInformation: userInformation, viewController: viewController, questiondata: questionData).lo_us_save()
+                    
+                    dbHelper.deleteTable(tableName: "myTable")
+                    dbHelper.createTable()
+                    for i in 1...100 {
+                        dbHelper.insertData(question: "\(i)번째 질문")
+                    }
                 }
             Spacer()
 //            Spacer()
@@ -118,6 +126,6 @@ struct View_4: View {
 
 struct View_4_Previews: PreviewProvider {
     static var previews: some View {
-        View_4(userInformation: UserInformation(), viewController: ViewController())
+        View_4(userInformation: UserInformation(), viewController: ViewController(), questionData: QuestionData())
     }
 }

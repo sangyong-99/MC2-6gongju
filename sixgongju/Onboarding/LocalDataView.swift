@@ -34,6 +34,8 @@ struct LocalDataView: View {
                 .background(Color(hex: 0xF5F5F5))
                 .cornerRadius(20)
                 .frame(width: 329, height: 219)
+                
+                
 
                 
                 
