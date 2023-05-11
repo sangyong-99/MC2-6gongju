@@ -70,7 +70,7 @@ struct View_4: View {
                                 HStack {
                                     Text("서 명")
                                         .font(.system(size: 18))
-                                        .foregroundColor(Color(hex:0xAEAEB2))
+                                        .foregroundColor(Color(uiColor: .systemGray4))
                                         .padding(EdgeInsets(top: 22, leading: 22, bottom: 0, trailing: 0))
                                     Spacer()
                                 }

@@ -23,7 +23,7 @@ struct View_1: View {
 //                        .border(Color.black, width: 1)
                         .frame(alignment: .leading)
                         .padding(.leading, 30)
-                        .padding(.bottom, 34)
+                        .padding(.bottom, 36)
                     Spacer()
                 }
                 TextField("이름", text: $name)

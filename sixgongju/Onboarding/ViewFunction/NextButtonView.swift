@@ -15,9 +15,9 @@ struct NextButtonView: View {
                 
                 ZStack {
                     Rectangle()
-                        .frame(width: 329, height: 44)
+                        .frame(width: 330, height: 44)
                         .cornerRadius(22)
-                        .foregroundColor(Color(hex: 0x17B978))
+                        .foregroundColor(Color(hex: 0x139460))
                     Text("다  음")
                         .font(.system(size: 16, weight: .bold))
                         .foregroundColor(.white)

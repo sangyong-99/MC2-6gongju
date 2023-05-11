@@ -20,8 +20,8 @@ struct ImagePickerView: View {
                 Rectangle()
                     .fill(Color(hex: 0xF5F5F5))
                     .cornerRadius(20)
-                    .frame(width: 329, height: 219)
-                    .shadow(color: Color(uiColor: .systemGray4), radius: 1, x: 0, y: 2)
+                    .frame(width: 330, height: 219)
+                    .shadow(color: Color(uiColor: .systemGray4), radius: 2, x: 0, y: 2)
                     .overlay(){
                         Image(systemName: "plus.circle.fill")
                             .font(.system(size: 33))
@@ -38,7 +38,7 @@ struct ImagePickerView: View {
                         Image(uiImage: image)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: 329, height: 219)
+                            .frame(width: 330, height: 219)
                             .cornerRadius(20)
                             .clipped()
 //                            .onTapGesture {
@@ -47,7 +47,7 @@ struct ImagePickerView: View {
                         
                         
                         Rectangle()
-                            .frame(width: 329, height: 219)
+                            .frame(width: 330, height: 219)
                             .cornerRadius(20)
                             .opacity(0.000000001) //투명도 문제?
                             .onTapGesture {
