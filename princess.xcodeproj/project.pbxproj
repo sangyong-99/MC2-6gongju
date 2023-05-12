@@ -37,6 +37,8 @@
 		5EB0FA582A0799F9004E8BAC /* QuestionListRow_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0FA572A0799F9004E8BAC /* QuestionListRow_2.swift */; };
 		5ECBF4C62A0C8C5600652631 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBF4C52A0C8C5600652631 /* LaunchScreenView.swift */; };
 		5ECBF4C82A0C8CBC00652631 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBF4C72A0C8CBC00652631 /* StartButtonView.swift */; };
+		5ECBF4CA2A0CB6AF00652631 /* ReceiptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBF4C92A0CB6AF00652631 /* ReceiptView.swift */; };
+		5ECBF4CC2A0CC20600652631 /* MainView_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBF4CB2A0CC20600652631 /* MainView_3.swift */; };
 		5EE00B5A2A04C96600A53D56 /* UserDefaultsDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE00B592A04C96600A53D56 /* UserDefaultsDataView.swift */; };
 		5EE00B5D2A04CA1400A53D56 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE00B5C2A04CA1400A53D56 /* Error.swift */; };
 		5EE00B7D2A055C1A00A53D56 /* databaseview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE00B7C2A055C1A00A53D56 /* databaseview.swift */; };
@@ -74,6 +76,8 @@
 		5EB0FA572A0799F9004E8BAC /* QuestionListRow_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListRow_2.swift; sourceTree = "<group>"; };
 		5ECBF4C52A0C8C5600652631 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		5ECBF4C72A0C8CBC00652631 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
+		5ECBF4C92A0CB6AF00652631 /* ReceiptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptView.swift; sourceTree = "<group>"; };
+		5ECBF4CB2A0CC20600652631 /* MainView_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView_3.swift; sourceTree = "<group>"; };
 		5EE00B592A04C96600A53D56 /* UserDefaultsDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDataView.swift; sourceTree = "<group>"; };
 		5EE00B5C2A04CA1400A53D56 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		5EE00B7B2A05545300A53D56 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -221,8 +225,10 @@
 				5E81BD722A072E8100D77D38 /* Two_Button.swift */,
 				5E81BD6E2A06848300D77D38 /* MainView_1.swift */,
 				5EB0FA552A0789A7004E8BAC /* QuestionListRow_1.swift */,
-				5EB0FA572A0799F9004E8BAC /* QuestionListRow_2.swift */,
 				5E81BD702A072E6F00D77D38 /* MainView_2.swift */,
+				5EB0FA572A0799F9004E8BAC /* QuestionListRow_2.swift */,
+				5ECBF4CB2A0CC20600652631 /* MainView_3.swift */,
+				5ECBF4C92A0CB6AF00652631 /* ReceiptView.swift */,
 				5E81BD612A06155D00D77D38 /* DetailView */,
 			);
 			path = Main;
@@ -333,6 +339,7 @@
 				5EE00B7D2A055C1A00A53D56 /* databaseview.swift in Sources */,
 				5E81BD692A0617BA00D77D38 /* RoundProgressView.swift in Sources */,
 				5E42C66A2A03FCE100CC84C7 /* NextButtonView.swift in Sources */,
+				5ECBF4CA2A0CB6AF00652631 /* ReceiptView.swift in Sources */,
 				5E42C6712A048F1E00CC84C7 /* View_3.swift in Sources */,
 				5ECBF4C82A0C8CBC00652631 /* StartButtonView.swift in Sources */,
 				5E81BD6F2A06848300D77D38 /* MainView_1.swift in Sources */,
@@ -340,6 +347,7 @@
 				5EB0FA562A0789A7004E8BAC /* QuestionListRow_1.swift in Sources */,
 				5E81BD672A06163000D77D38 /* MainTopView.swift in Sources */,
 				5E42C67C2A049C8C00CC84C7 /* ImagePickerView.swift in Sources */,
+				5ECBF4CC2A0CC20600652631 /* MainView_3.swift in Sources */,
 				5E42C6652A03F2B200CC84C7 /* View_1.swift in Sources */,
 				5E42C65E2A03EFEA00CC84C7 /* ModelData.swift in Sources */,
 				5E81BD5D2A06110900D77D38 /* DataUserDefaultsSave.swift in Sources */,

@@ -13,6 +13,7 @@ class ViewController: ObservableObject {
     @Published var currentPage: Int = 1
     @Published var setting: Bool = false
     @Published var viewSelection: Bool = true
+    @Published var isReceiptView: Bool = false
 }
 
 //struct Line {
@@ -36,5 +37,6 @@ class UserInformation: ObservableObject {
 class QuestionData: ObservableObject {
     @Published var viewresetcount = 0
     @Published var completeQuestionCount: Int = 0
+    
 }
 

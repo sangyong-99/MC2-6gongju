@@ -14,18 +14,26 @@ struct View_2: View {
     @State var viewController: ViewController
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(spacing: 0) {
             Spacer()
                 .frame(height:158)
-            Text("은퇴일을 선택하세요")
-                .font(.system(size: 30))
-                .fontWeight(.semibold)
+            HStack {
+                Text("은퇴일을 선택하세요")
+                    .font(.system(size: 30))
+                    .fontWeight(.semibold)
+                    .padding(.leading, 30)
+                Spacer()
+            }
             Spacer()
                 .frame(height:20)
             
-            Text("은퇴 100일 이내에 사용을 권장해요")
-                .font(.system(size: 16))
-                .foregroundColor(Color(hex: 0x48484A))
+            HStack {
+                Text("은퇴 100일 이내에 사용을 권장해요")
+                    .font(.system(size: 16))
+                    .foregroundColor(Color(hex: 0x48484A))
+                    .padding(.leading, 30)
+                Spacer()
+            }
             Spacer()
             
             DatePicker("date", selection: $date, in: Date()..., displayedComponents: .date)

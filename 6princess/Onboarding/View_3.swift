@@ -21,8 +21,8 @@ struct View_3: View {
                 HStack{
                     
                     Text("받고싶은 은퇴 선물의 \n이미지를 넣어주세요")
-                        .font(.system(size: 32, weight: .semibold)) //폰트 사이즈
-                        .lineSpacing(15)    //줄간격
+                        .font(.system(size: 30, weight: .semibold)) //폰트 사이즈
+                        .lineSpacing(1)    //줄간격
                         .padding(.leading, 30)
                     Spacer()
                 }

@@ -28,7 +28,7 @@ struct MainTopView: View {
 //                .padding(.top, 34)
             
             MainImageSignView(userInformation: userInformation, viewController: viewController) //preview 전용코드
-                .padding(.top, 34)      //preview 코드
+                .padding(.top, 33)      //preview 코드
 //            Button("dd"){     //circle progress animation
 //                questiondata.completeQuestionCount += 1
 ////                percent += 30

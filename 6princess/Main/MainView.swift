@@ -14,13 +14,18 @@ struct MainView: View {
     var body: some View {
         VStack(spacing: 0){
             MainTopView(userInformation: userInformation, viewController: viewController, questiondata: questiondata)
-                .padding(.top, 64)
-            Two_Button(viewController: viewController)
+                .padding(.top, 67)
+            Two_Button(viewController: viewController, questionData: questiondata)
                 .padding(.top, 38)
                 .padding(.bottom, 10)
 //            Spacer()
             if viewController.viewSelection {
-                MainView_1(questiondata: questiondata)
+                if questiondata.completeQuestionCount != 100{
+                    MainView_1(questiondata: questiondata)
+                }
+                else {
+                    MainView_3(userInformation: userInformation, viewController: viewController)
+                }
                 
             }
             else {

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Two_Button: View {
     @StateObject var viewController: ViewController
+    @StateObject var questionData: QuestionData
     var body: some View {
         ZStack {
             HStack{
@@ -18,14 +19,20 @@ struct Two_Button: View {
                         viewController.viewSelection = true
                         print("MainView_1")
                     }) {
-                        Text("예정")
-                            .bold()
-                            .foregroundColor(viewController.viewSelection ? Color.black : Color.gray)
+                        if questionData.completeQuestionCount != 100{
+                            Text("예정")
+                                .bold()
+                                .foregroundColor(viewController.viewSelection ? Color.black : Color.gray)
+                        }
+                        else{
+                            Text("선물 보기")
+                                .bold()
+                                .foregroundColor(viewController.viewSelection ? Color.black : Color.gray)
+                        }
                     }
                     .padding(.bottom, 7.21)
                     Divider()
                         .frame(minHeight: 1.5)
-                    
                         .overlay(viewController.viewSelection ? Color.black : Color.white)
                     
                 }
@@ -62,6 +69,6 @@ struct Two_Button: View {
 
 struct Two_Button_Previews: PreviewProvider {
     static var previews: some View {
-        Two_Button(viewController: ViewController())
+        Two_Button(viewController: ViewController(), questionData: QuestionData())
     }
 }

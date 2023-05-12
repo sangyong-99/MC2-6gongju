@@ -19,7 +19,7 @@ struct View_1: View {
                     .frame(height: 158)
                 HStack {
                     Text("이름을 입력해주세요")
-                        .font(.system(size: 32, weight: .semibold))
+                        .font(.system(size: 30, weight: .semibold))
 //                        .border(Color.black, width: 1)
                         .frame(alignment: .leading)
                         .padding(.leading, 30)
@@ -51,6 +51,7 @@ struct View_1: View {
         .ignoresSafeArea()
         
     }
+
 }
 
 struct View_1_Previews: PreviewProvider {

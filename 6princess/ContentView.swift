@@ -19,8 +19,10 @@ struct ContentView: View {
                 case 1:
                     LaunchScreenView(userInformation: userInformation, viewController: viewController, questionData: questionData)
                 case 2:
-                    MainView(userInformation: userInformation, viewController: viewController, questiondata: questionData)
+                        MainView(userInformation: userInformation, viewController: viewController, questiondata: questionData)
 //                    LocalDataView(userInformation: userInformation, viewController: viewController)
+                case 3:
+                    ReceiptView(userInformation: userInformation, viewController: viewController)
                 default:
                     Error()
                 }
