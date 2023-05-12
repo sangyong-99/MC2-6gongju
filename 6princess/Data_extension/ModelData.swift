@@ -37,6 +37,6 @@ class UserInformation: ObservableObject {
 class QuestionData: ObservableObject {
     @Published var viewresetcount = 0
     @Published var completeQuestionCount: Int = 0
-    
+    @Published var showCompleteModalView: Bool = false
 }
 

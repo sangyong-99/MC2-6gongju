@@ -37,15 +37,7 @@ struct DataUserDefaultsSave {
         //
         
         //싸인 저장 코드
-        var savedArray1: [[[CGFloat]]] = []
-        for subArray in userInformation.sign {
-            var savedSubArray: [[CGFloat]] = []
-            for point in subArray {
-                savedSubArray.append([point.x / 3, point.y / 3])
-            }
-            savedArray.append(savedSubArray)
-        }
-        UserDefaults.standard.set(savedArray1, forKey: "smallsign")
+        
         
     }
 }

@@ -33,6 +33,12 @@ struct MainView: View {
             }
             Spacer()
         }
+        .sheet(isPresented: self.$questiondata.showCompleteModalView) {
+            CompleteModalView(userInformation: userInformation, questiondata: questiondata)
+                .presentationBackground(.clear)
+                .frame(width: 328, height: 385)
+            
+        }
         .ignoresSafeArea()
     }
 }

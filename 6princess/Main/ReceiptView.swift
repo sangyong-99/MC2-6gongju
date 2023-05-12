@@ -12,16 +12,19 @@ struct ReceiptView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 0){
-                Spacer()
-                    .frame(height: 97)
+//                Spacer()
+//                    .frame(height: 97)
                 Text("\(userInformation.name)님의 은퇴 선물 교환증")
                     .font(.system(size: 20, weight: .bold))
+                    .padding(.top, 97)
+                    .padding(.bottom, 28)
                 //                 Text("\(dateToString(date: userInformation.date))")
-                Spacer()
-                    .frame(height: 28)
+//                Spacer()
+//                    .frame(height: 28)
                 ZStack{
-                    Image("receipt")
-                        .frame(width: 276.5, height: 532.58)
+                    Image("receipt1")
+                        .resizable()
+                        .frame(width: 277, height: 532.58)
                     VStack(spacing: 0){
                         //         if let image = userInformation.image {
                         if let image = UIImage(named: "1"){
@@ -44,48 +47,54 @@ struct ReceiptView: View {
                             Text("\(userInformation.productName)")
                         }
                         .padding(.top, 21)
-                        .padding(.horizontal, 70)
+                        .padding(.horizontal, 80)
                         
-                        Divider()
-                            .foregroundColor(Color(hex: 0x979797))
-                            .padding(.horizontal, 70)
-                            .padding(.top, 7.5)
+//                        Divider()
+//                            .foregroundColor(Color(hex: 0x979797))
+//                            .padding(.horizontal, 80)
+//                            .padding(.top, 7.5)
                         HStack{
                             Text("교환처")
                             Spacer()
                             Text("내 가족")
                         }
-                        .padding(.top, 7.5)
-                        .padding(.horizontal, 70)
-                        Divider()
-                            .foregroundColor(Color(hex: 0x979797))
-                            .padding(.horizontal, 70)
-                            .padding(.top, 7.5)
+                        .padding(.top, 15)
+                        .padding(.horizontal, 80)
                         HStack{
                             Text("유효기간")
                             Spacer()
                             Text("\(dateToString(date: Calendar.current.date(byAdding: .year, value: 1, to: userInformation.date) ?? Date()))")
                         }
-                        .padding(.top, 7.5)
-                        .padding(.horizontal, 70)
-                        HStack {
+                        .padding(.top, 15)
+                        .padding(.horizontal, 80)
+                        ZStack {
+                            HStack {
 
-                            Spacer()
-                            Canvas { context, size in
-                                for line in print_sign() {
-                                    var path = Path()
-                                    path.addLines(line)
-                                    context.stroke(path, with: .color(Color.black), lineWidth: 2)
+                                Spacer()
+                                Canvas { context, size in
+                                    for line in print_sign() {
+                                        var path = Path()
+                                        path.addLines(line)
+                                        context.stroke(path, with: .color(Color.black), lineWidth: 2)
+                                    }
+
                                 }
+                                .frame(width: 110, height: 73)
+                                .background(Color.white)
+                                .cornerRadius(20)
+                                .padding(.top, 1)
+                                .padding(.trailing, 105)
+    //                            .opacity(0)
 
                             }
-                            .frame(width: 110, height: 73)
-                            .background(Color(hex: 0xF5F5F5))
-                            .cornerRadius(20)
-                            .padding(.top, 12)
-                            .padding(.trailing, 90)
-//                            .opacity(0)
-
+                            HStack {
+                                Spacer()
+                                Image("font1")
+                                    .resizable()
+                                    .frame(width: 44, height: 18)
+                                    .padding(.top, 45)
+                                    .padding(.horizontal, 80)
+                            }
                         }
                         Spacer()
                         
@@ -95,23 +104,26 @@ struct ReceiptView: View {
                     
                 }
                 Spacer()
-                    .frame(height: 65)
+                    .frame(height: 61)
                 ZStack{
                     Rectangle()
                         .frame(width: 330, height: 44)
                         .cornerRadius(22)
-                        .foregroundColor(Color(hex: 0x139460))
+                        .foregroundColor(Color.white)
+                        .opacity(0)
                         .onTapGesture {
                             //공유 실행코드
                         }
                     
-                    Text("교환증 가족과 공유하기")
-                        .font(.system(size: 16, weight: .bold))
-                        .foregroundColor(.white)
+//                    Text("교환증 가족과 공유하기")
+//                        .font(.system(size: 16, weight: .bold))
+//                        .foregroundColor(.white)
+                        
                 }
-                Spacer()
-                    .frame(height: 0)
-                
+//
+//                Spacer()
+//                    .frame(height: 0)
+//
                 
             }
             VStack {
@@ -134,14 +146,14 @@ struct ReceiptView: View {
     
     func print_sign() -> [[CGPoint]]{
         var pointsArray: [[CGPoint]] = []
-        if let savedArray = UserDefaults.standard.object(forKey: "smallsign") as? [[[CGFloat]]] {
+        if let savedArray = UserDefaults.standard.object(forKey: "sign") as? [[[CGFloat]]] {
             
             
             // 2. 2차원 배열로 변환합니다.
             for savedSubArray in savedArray {
                 var subArray: [CGPoint] = []
                 for pointArray in savedSubArray {
-                    let point = CGPoint(x: pointArray[0], y: pointArray[1])
+                    let point = CGPoint(x: pointArray[0] / 3, y: pointArray[1] / 3)
                     subArray.append(point)
                 }
                 pointsArray.append(subArray)

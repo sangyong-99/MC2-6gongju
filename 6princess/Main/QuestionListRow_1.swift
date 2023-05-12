@@ -23,6 +23,11 @@ struct QuestionListRow_1: View {
                         questiondata.viewresetcount += 1
                         questiondata.completeQuestionCount += 1
                         UserDefaults.standard.set(questiondata.completeQuestionCount, forKey: "completeQuestionCount")
+                        if(questiondata.completeQuestionCount % 10 == 0) {
+                            questiondata.showCompleteModalView = true
+                        } else {
+                            questiondata.showCompleteModalView = false
+                        }
                     }
                 
                 Text(model.question)

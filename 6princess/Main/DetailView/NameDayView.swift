@@ -13,10 +13,16 @@ struct NameDayView: View {
     
     var body: some View {
         ZStack {
-            Text("\(userInformation.name)님 \n\(userInformation.dday)일 남았습니다.")
-                .font(.system(size: 19, weight: .bold)) //폰트 사이즈
-                .lineSpacing(8.5)    //줄간격
-            
+            if userInformation.dday == 0{
+                Text("\(userInformation.name)님\n오늘입니다.")
+                    .font(.system(size: 19, weight: .bold)) //폰트 사이즈
+                    .lineSpacing(8.5)    //줄간격
+            }
+            else{
+                Text("\(userInformation.name)님 \n\(userInformation.dday)일 남았습니다.")
+                    .font(.system(size: 19, weight: .bold)) //폰트 사이즈
+                    .lineSpacing(8.5)    //줄간격
+            }
             
         }
         .ignoresSafeArea()

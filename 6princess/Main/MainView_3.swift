@@ -28,7 +28,7 @@ struct MainView_3: View {
                 .frame(height: 125)
             
             Rectangle()
-                .frame(width: 329, height: 44)
+                .frame(width: 330, height: 44)
                 .foregroundColor(Color(hex: 0x139460))
                 .cornerRadius(22)
                 .overlay{
