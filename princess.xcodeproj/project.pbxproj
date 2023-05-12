@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E00F02C2A0DC63800205521 /* CompleteModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E00F02B2A0DC63800205521 /* CompleteModalView.swift */; };
 		5E42C65E2A03EFEA00CC84C7 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E42C65D2A03EFEA00CC84C7 /* ModelData.swift */; };
 		5E42C6652A03F2B200CC84C7 /* View_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E42C6642A03F2B200CC84C7 /* View_1.swift */; };
 		5E42C66A2A03FCE100CC84C7 /* NextButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E42C6692A03FCE100CC84C7 /* NextButtonView.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E00F02B2A0DC63800205521 /* CompleteModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteModalView.swift; sourceTree = "<group>"; };
 		5E42C65D2A03EFEA00CC84C7 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		5E42C6642A03F2B200CC84C7 /* View_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_1.swift; sourceTree = "<group>"; };
 		5E42C6692A03FCE100CC84C7 /* NextButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonView.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				5E81BD622A0615AC00D77D38 /* NameDayView.swift */,
+				5E00F02B2A0DC63800205521 /* CompleteModalView.swift */,
 				5E81BD682A0617BA00D77D38 /* RoundProgressView.swift */,
 				5E81BD6A2A061C1C00D77D38 /* MainImageSignView.swift */,
 			);
@@ -327,6 +330,7 @@
 				5E80570429FA4F90006DF630 /* ContentView.swift in Sources */,
 				5ECBF4C62A0C8C5600652631 /* LaunchScreenView.swift in Sources */,
 				5E81BD732A072E8100D77D38 /* Two_Button.swift in Sources */,
+				5E00F02C2A0DC63800205521 /* CompleteModalView.swift in Sources */,
 				5E42C66C2A0402CE00CC84C7 /* Color_extension.swift in Sources */,
 				5EE00B5A2A04C96600A53D56 /* UserDefaultsDataView.swift in Sources */,
 				5E42C6802A049D0400CC84C7 /* ImagePicker.swift in Sources */,
