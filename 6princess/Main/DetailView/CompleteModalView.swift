@@ -1,10 +1,11 @@
 //
- //  CompleteModalView.swift
- //  princess
- //
- //  Created by jaelyung kim on 2023/05/11.
- //
- import SwiftUI
+//   CompleteModalView.swift
+//   princess
+//
+//   Created by jaelyung kim on 2023/05/11.
+//
+import SwiftUI
+import EffectsLibrary
 
  struct CompleteModalView: View {
      @StateObject var userInformation: UserInformation
@@ -12,9 +13,12 @@
 
      var body: some View {
          ZStack {
+             Color.clear
              Image("complete")
                  .resizable()
                  .aspectRatio(contentMode: .fit)
+             
+             ConfettiView()
 
              VStack (spacing: 0){
                  Text("\(userInformation.name)")
