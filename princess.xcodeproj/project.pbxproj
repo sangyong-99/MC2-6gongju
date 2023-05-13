@@ -34,6 +34,7 @@
 		5E81BD712A072E6F00D77D38 /* MainView_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81BD702A072E6F00D77D38 /* MainView_2.swift */; };
 		5E81BD732A072E8100D77D38 /* Two_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81BD722A072E8100D77D38 /* Two_Button.swift */; };
 		5E81BD752A074B7700D77D38 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81BD742A074B7700D77D38 /* Database.swift */; };
+		5E9730EF2A0F6C8B00C362EB /* EffectsLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 5E9730EE2A0F6C8B00C362EB /* EffectsLibrary */; };
 		5EB0FA562A0789A7004E8BAC /* QuestionListRow_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0FA552A0789A7004E8BAC /* QuestionListRow_1.swift */; };
 		5EB0FA582A0799F9004E8BAC /* QuestionListRow_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0FA572A0799F9004E8BAC /* QuestionListRow_2.swift */; };
 		5ECBF4C62A0C8C5600652631 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBF4C52A0C8C5600652631 /* LaunchScreenView.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		5E00F02B2A0DC63800205521 /* CompleteModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteModalView.swift; sourceTree = "<group>"; };
+		5E261B182A0E33D60085892F /* princess-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "princess-Info.plist"; sourceTree = "<group>"; };
 		5E42C65D2A03EFEA00CC84C7 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		5E42C6642A03F2B200CC84C7 /* View_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_1.swift; sourceTree = "<group>"; };
 		5E42C6692A03FCE100CC84C7 /* NextButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E9730EF2A0F6C8B00C362EB /* EffectsLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +165,7 @@
 		5E8056F529FA4F90006DF630 = {
 			isa = PBXGroup;
 			children = (
+				5E261B182A0E33D60085892F /* princess-Info.plist */,
 				5E80570029FA4F90006DF630 /* 6princess */,
 				5E8056FF29FA4F90006DF630 /* Products */,
 				5EE00B7A2A05545300A53D56 /* Frameworks */,
@@ -269,6 +273,9 @@
 			dependencies = (
 			);
 			name = princess;
+			packageProductDependencies = (
+				5E9730EE2A0F6C8B00C362EB /* EffectsLibrary */,
+			);
 			productName = 6princess;
 			productReference = 5E8056FE29FA4F90006DF630 /* princess.app */;
 			productType = "com.apple.product-type.application";
@@ -297,6 +304,9 @@
 				Base,
 			);
 			mainGroup = 5E8056F529FA4F90006DF630;
+			packageReferences = (
+				5E9730ED2A0F6C8B00C362EB /* XCRemoteSwiftPackageReference "effects-library" */,
+			);
 			productRefGroup = 5E8056FF29FA4F90006DF630 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -488,6 +498,8 @@
 				DEVELOPMENT_TEAM = C3U3CZ666D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "princess-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -517,6 +529,8 @@
 				DEVELOPMENT_TEAM = C3U3CZ666D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "princess-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -557,6 +571,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5E9730ED2A0F6C8B00C362EB /* XCRemoteSwiftPackageReference "effects-library" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GetStream/effects-library";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5E9730EE2A0F6C8B00C362EB /* EffectsLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5E9730ED2A0F6C8B00C362EB /* XCRemoteSwiftPackageReference "effects-library" */;
+			productName = EffectsLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5E8056F629FA4F90006DF630 /* Project object */;
 }

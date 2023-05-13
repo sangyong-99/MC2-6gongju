@@ -25,7 +25,7 @@ struct ImagePickerView: View {
                     .overlay(){
                         Image(systemName: "plus.circle.fill")
                             .font(.system(size: 33))
-                            .foregroundColor(Color(hex: 0x17B978))
+                            .foregroundColor(Color(hex: 0x139460))
                     }
                     .onTapGesture {
                         isPickerShowing = true

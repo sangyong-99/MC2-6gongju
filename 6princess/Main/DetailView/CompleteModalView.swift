@@ -1,23 +1,27 @@
 //
- //  CompleteModalView.swift
- //  princess
+ //   CompleteModalView.swift
+ //   princess
  //
- //  Created by jaelyung kim on 2023/05/11.
+ //   Created by jaelyung kim on 2023/05/11.
  //
  import SwiftUI
+ import EffectsLibrary
 
- struct CompleteModalView: View {
-     @StateObject var userInformation: UserInformation
-     @StateObject var questiondata: QuestionData
+  struct CompleteModalView: View {
+      @StateObject var userInformation: UserInformation
+      @StateObject var questiondata: QuestionData
 
-     var body: some View {
-         ZStack {
-             Image("complete")
-                 .resizable()
-                 .aspectRatio(contentMode: .fit)
+      var body: some View {
+          ZStack {
+              Color.clear
+              Image("complete")
+                  .resizable()
+                  .aspectRatio(contentMode: .fit)
 
-             VStack (spacing: 0){
-                 Text("\(userInformation.name)")
+              ConfettiView()
+
+              VStack (spacing: 0){
+                  Text("\(userInformation.name)")
                      .bold()
                      .font(.system(size: 24))
                      .foregroundColor(.white)
@@ -47,8 +51,6 @@
                  
                  Spacer()
                      .frame(height: 20)
-
-
                  ZStack {
                      Rectangle()
                          .cornerRadius(22)
@@ -64,7 +66,6 @@
          }
      }
  }
-
  struct CompleteModalView_Previews: PreviewProvider {
      static var previews: some View {
          CompleteModalView(userInformation: UserInformation(), questiondata: QuestionData())
