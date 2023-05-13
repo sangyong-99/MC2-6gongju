@@ -5,7 +5,7 @@
  //   Created by jaelyung kim on 2023/05/11.
  //
  import SwiftUI
- import EffectsLibrary
+ import EffectsLibrary 
 
   struct CompleteModalView: View {
       @StateObject var userInformation: UserInformation
