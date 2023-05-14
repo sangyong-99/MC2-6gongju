@@ -20,9 +20,19 @@ struct View_4: View {
             Color.clear
             
             VStack(spacing:0){
-                Spacer()
-                    .frame(height: 80)
-                
+                HStack{
+                    Image(systemName: "chevron.backward")
+                        .foregroundColor(Color(hex: 0x979797))
+                        .padding(.leading, 14)
+                    Text("Back")
+                        .font(.system(size: 15))
+                        .foregroundColor(Color(hex: 0x979797))
+                    Spacer()
+                }
+                .frame(alignment: .leading)
+                .onTapGesture {
+                    viewController.currentPage -= 1
+                }
                 //Title
                 HStack {
                     Text("나에게 은퇴 선물을 줄\n가족에게 동의를 받아보세요")
@@ -31,7 +41,8 @@ struct View_4: View {
                         .padding(.leading, 30)
                     Spacer()
                 }
-                .padding(.bottom, 12)
+                .padding(.top, 76)
+                
                 //Description
                 HStack {
                     Text("20개의 할 일을 완료하고, 은퇴 선물을 받아보세요")
@@ -40,6 +51,7 @@ struct View_4: View {
                         .padding(.leading, 30)
                     Spacer()
                 }
+                .padding(.top, 12)
                 .padding(.bottom, 88)
                 
                 //Sign
@@ -97,8 +109,7 @@ struct View_4: View {
                         }
                     )
                 }
-                Spacer()
-                    .frame(height: 16)
+                .padding(.bottom, 20)
                 
                 //Sign_Description
                 
@@ -109,6 +120,7 @@ struct View_4: View {
                         .padding(.leading, 30)
                     Spacer()
                 }
+                .padding(.bottom, 112)
                 
                 //Button
                 NextButtonView()
@@ -123,8 +135,9 @@ struct View_4: View {
                             dbHelper.insertData(question: "\(questionData.questions[i])")
                         }
                     }
-                    .padding(.top, 112)
+                   
                 BottomCircleView(viewCount: 4)
+
                 
             }
             .ignoresSafeArea()

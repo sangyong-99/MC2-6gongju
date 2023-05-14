@@ -38,15 +38,15 @@ struct ReceiptView: View {
                         
                         Text("\(receiptDateToString(date: userInformation.date)) 7777")
                             .padding(.top, 85)
-                        DottedLineView()
-                            .padding(.top, 18)
+//                        DottedLineView()
+//                            .padding(.top, 18)
                         
                         HStack{
                             Text("상품명")
                             Spacer()
                             Text("\(userInformation.productName)")
                         }
-                        .padding(.top, 21)
+                        .padding(.top, 40)
                         .padding(.horizontal, 80)
                         
 //                        Divider()

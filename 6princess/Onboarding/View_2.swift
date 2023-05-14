@@ -18,8 +18,21 @@ struct View_2: View {
             Color.clear
         
             VStack(spacing: 0) {
-                Spacer()
-                    .frame(height:158)
+        
+                HStack{
+                    Image(systemName: "chevron.backward")
+                        .foregroundColor(Color(hex: 0x979797))
+                        .padding(.leading, 14)
+                    Text("Back")
+                        .font(.system(size: 15))
+                        .foregroundColor(Color(hex: 0x979797))
+                    Spacer()
+                }
+                .frame(alignment: .leading)
+                .onTapGesture {
+                    viewController.currentPage -= 1
+                }
+                
                 HStack {
                     Text("은퇴일을 선택하세요")
                         .font(.system(size: 30))
@@ -27,8 +40,7 @@ struct View_2: View {
                         .padding(.leading, 30)
                     Spacer()
                 }
-                Spacer()
-                    .frame(height:12)
+                .padding(.top, 76)
                 
                 HStack {
                     Text("은퇴 100일 이내에 사용을 권장해요")
@@ -37,23 +49,24 @@ struct View_2: View {
                         .padding(.leading, 30)
                     Spacer()
                 }
-                Spacer()
+                .padding(.top, 12)
                 
                 DatePicker("date", selection: $date, in: Date()..., displayedComponents: .date)
                     .datePickerStyle(GraphicalDatePickerStyle())
                     .frame(width: 330, height: 355)
                     .accentColor(Color(hex: 0x139460))
                     .environment(\.locale, Locale.init(identifier: "ko"))
-                Spacer()
+                    .padding(.top, 59)
                 
                 NextButtonView()
                     .onTapGesture {
                         userInformation.date = date
                         viewController.currentPage += 1
                     }
+                    .padding(.top, 77)
                 BottomCircleView(viewCount: 2)
-                Spacer()
-                    .frame(height:52)
+//                Spacer()
+//                    .frame(height:53)
                 
             }
             .ignoresSafeArea()

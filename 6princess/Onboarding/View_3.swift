@@ -16,8 +16,21 @@ struct View_3: View {
     var body: some View {
         ZStack {
             VStack(spacing: 0){
-                Spacer()
-                    .frame(height: 158) //가장위에 레이아웃
+                
+                HStack{
+                    Image(systemName: "chevron.backward")
+                        .foregroundColor(Color(hex: 0x979797))
+                        .padding(.leading, 14)
+                    Text("Back")
+                        .font(.system(size: 15))
+                        .foregroundColor(Color(hex: 0x979797))
+                    Spacer()
+                }
+                .frame(alignment: .leading)
+                .onTapGesture {
+                    viewController.currentPage -= 1
+                }
+                
                 HStack{
                     
                     Text("받고싶은 은퇴 선물의 \n이미지와 설명을 작성하세요")
@@ -26,9 +39,7 @@ struct View_3: View {
                         .padding(.leading, 30)
                     Spacer()
                 }
-                
-                Spacer()
-                    .frame(height:12)
+                .padding(.top, 76)
                 
                 HStack {
                     Text("상세하고 명확한 이미지를 권장해요")
@@ -37,12 +48,11 @@ struct View_3: View {
                         .foregroundColor(Color(hex: 0x636366))
                     Spacer()
                 }
+                .padding(.top, 12)
                 
-                //imagePiker
-                Spacer()
-                    .frame(height: 70)
                 ImagePickerView(userInformation: userInformation, viewController: viewController, selectedImage: $selectedImage, productName: $productName)
-                Spacer()
+                    .padding(.top, 80)
+                
                 NextButtonView()
                     .onTapGesture {
                         userInformation.image = selectedImage
@@ -50,9 +60,10 @@ struct View_3: View {
                         viewController.currentPage += 1
                        //UserDefaults 삽입
                     }
+                    .padding(.top, 85.5)
                 BottomCircleView(viewCount: 3)
-                Spacer()
-                    .frame(height: 52)
+//                Spacer()
+//                    .frame(height: 52)
                     
             }
         }
