@@ -19,7 +19,7 @@ struct Two_Button: View {
                         viewController.viewSelection = true
                         print("MainView_1")
                     }) {
-                        if questionData.completeQuestionCount != 100{
+                        if questionData.completeQuestionCount != 20{
                             Text("예정")
                                 .bold()
                                 .foregroundColor(viewController.viewSelection ? Color.black : Color.gray)
