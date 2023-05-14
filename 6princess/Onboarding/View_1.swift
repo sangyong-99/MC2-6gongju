@@ -14,6 +14,7 @@ struct View_1: View {
     var body: some View {
         
         ZStack{
+            Color.clear
             VStack(spacing: 0) {
                 Spacer()
                     .frame(height: 158)
@@ -38,12 +39,13 @@ struct View_1: View {
                     
                     
                 Spacer()
-                NextButtonView(viewCount: 1)
+                NextButtonView()
                     .onTapGesture {
                         userInformation.name = name
                         viewController.currentPage += 1
                        //UserDefaults 삽입
                     }
+                BottomCircleView(viewCount: 1)
                 Spacer()
                     .frame(height: 52)
             }

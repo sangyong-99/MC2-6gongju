@@ -16,7 +16,7 @@ struct MainView_3: View {
 //            .frame(width: 300, height: 386)
         VStack(spacing: 0){
             HStack {
-                Text("축하합니다.\n\(userInformation.name)님의 모든 날을 축하드립니다.\n어쩌고 저쩌고 이렇고 저렇고~")
+                Text("\(userInformation.name)님의 은퇴를 진심으로 축하드립니다.\n당신이 달려온 시간들과 노력이 참으로 존경스럽습니다.\n앞으로 걸어가시는 길이 아름다운 꽃길이 되시길\n은퇴잉이 응원합니다.")
                     .font(.system(size: 15, weight: .semibold))
                 .lineSpacing(30)
                 .padding(.leading, 30)
@@ -25,7 +25,7 @@ struct MainView_3: View {
             .padding(.top, 30)
             
             Spacer()
-                .frame(height: 125)
+                .frame(height: 67)
             
             Rectangle()
                 .frame(width: 330, height: 44)

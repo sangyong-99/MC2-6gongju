@@ -18,6 +18,7 @@ struct QuestionListRow_2: View {
         VStack{
             HStack {
                 Image(systemName: "circle.fill")
+                    .resizable()
                     .foregroundColor(Color(hex: 0x139460))
                     .onTapGesture {
                         dbHelper.updateData(id: model.id, complete: 0)
@@ -25,13 +26,13 @@ struct QuestionListRow_2: View {
                         questiondata.completeQuestionCount -= 1
                         UserDefaults.standard.set(questiondata.completeQuestionCount, forKey: "completeQuestionCount")
                     }
+                    .frame(width: 22, height: 22)
                 Text(model.question)
-                    .padding(.leading, 20)
                 Spacer()
             }
             
             Divider()
-                .padding(.leading, 40)
+                .frame(width: 297)
         }
         .padding(.top, 5)
         .padding(.bottom, 1)
