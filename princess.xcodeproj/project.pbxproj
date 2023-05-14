@@ -19,6 +19,7 @@
 		5E42C67A2A04907300CC84C7 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E42C6792A04907300CC84C7 /* StartView.swift */; };
 		5E42C67C2A049C8C00CC84C7 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E42C67B2A049C8C00CC84C7 /* ImagePickerView.swift */; };
 		5E42C6802A049D0400CC84C7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E42C67F2A049D0400CC84C7 /* ImagePicker.swift */; };
+		5E4B17FC2A10D1200030FBFD /* BackBottonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B17FB2A10D1200030FBFD /* BackBottonView.swift */; };
 		5E80570229FA4F90006DF630 /* _princessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E80570129FA4F90006DF630 /* _princessApp.swift */; };
 		5E80570429FA4F90006DF630 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E80570329FA4F90006DF630 /* ContentView.swift */; };
 		5E80570629FA4F91006DF630 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E80570529FA4F91006DF630 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		5E42C6792A04907300CC84C7 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		5E42C67B2A049C8C00CC84C7 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		5E42C67F2A049D0400CC84C7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		5E4B17FB2A10D1200030FBFD /* BackBottonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackBottonView.swift; sourceTree = "<group>"; };
 		5E8056FE29FA4F90006DF630 /* princess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = princess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E80570129FA4F90006DF630 /* _princessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _princessApp.swift; sourceTree = "<group>"; };
 		5E80570329FA4F90006DF630 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				7DAC66492A107F55000A0FF9 /* BottomCircleView.swift */,
+				5E4B17FB2A10D1200030FBFD /* BackBottonView.swift */,
 				5E42C67B2A049C8C00CC84C7 /* ImagePickerView.swift */,
 				5E42C6692A03FCE100CC84C7 /* NextButtonView.swift */,
 			);
@@ -367,6 +370,7 @@
 				5E42C6652A03F2B200CC84C7 /* View_1.swift in Sources */,
 				5E42C65E2A03EFEA00CC84C7 /* ModelData.swift in Sources */,
 				5E81BD5D2A06110900D77D38 /* DataUserDefaultsSave.swift in Sources */,
+				5E4B17FC2A10D1200030FBFD /* BackBottonView.swift in Sources */,
 				5E81BD752A074B7700D77D38 /* Database.swift in Sources */,
 				5E81BD6B2A061C1C00D77D38 /* MainImageSignView.swift in Sources */,
 			);

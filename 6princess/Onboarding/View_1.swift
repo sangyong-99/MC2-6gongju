@@ -1,10 +1,3 @@
-//
-//  View_1.swift
-//  princess
-//
-//  Created by 신상용 on 2023/05/04.
-//
-
 import SwiftUI
 
 struct View_1: View {
@@ -16,6 +9,8 @@ struct View_1: View {
         ZStack{
             Color.clear
             VStack(spacing: 0) {
+                Spacer()
+                    .frame(height: 158)
                 HStack {
                     Text("이름을 입력해주세요")
                         .font(.system(size: 30, weight: .semibold))
@@ -25,7 +20,6 @@ struct View_1: View {
                         .padding(.bottom, 36)
                     Spacer()
                 }
-                .padding(.top, 158)
                 TextField("이름", text: $name)
 //                    .border(Color.black, width: 1)
                     .padding(.leading, 34)
@@ -36,16 +30,17 @@ struct View_1: View {
                     .padding([.leading, .trailing], 30)
                     .padding(.top, 5)
                     
+                    
+                Spacer()
                 NextButtonView()
                     .onTapGesture {
                         userInformation.name = name
                         viewController.currentPage += 1
                        //UserDefaults 삽입
                     }
-                    .padding(.top, 468.5)
-                
                 BottomCircleView(viewCount: 1)
-                    .padding(.bottom, 52)
+                Spacer()
+                    .frame(height: 52)
             }
         }
         .ignoresSafeArea()
@@ -59,3 +54,4 @@ struct View_1_Previews: PreviewProvider {
         View_1(userInformation: UserInformation(), viewController: ViewController())
     }
 }
+

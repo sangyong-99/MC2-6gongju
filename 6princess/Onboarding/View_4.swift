@@ -1,10 +1,3 @@
-//
-//  View_4.swift
-//  sixprincesses
-//
-//  Created by 신서연 on 2023/05/08.
-//
-
 import SwiftUI
 
 struct View_4: View {
@@ -19,30 +12,22 @@ struct View_4: View {
         ZStack {
             Color.clear
             
+            BackBottonView(viewController: viewController)
+                .offset(y:-361)
+            
             VStack(spacing:0){
-                HStack{
-                    Image(systemName: "chevron.backward")
-                        .foregroundColor(Color(hex: 0x979797))
-                        .padding(.leading, 14)
-                    Text("Back")
-                        .font(.system(size: 15))
-                        .foregroundColor(Color(hex: 0x979797))
-                    Spacer()
-                }
-                .frame(alignment: .leading)
-                .onTapGesture {
-                    viewController.currentPage -= 1
-                }
+                Spacer()
+                    .frame(height: 90)
+                
                 //Title
                 HStack {
                     Text("나에게 은퇴 선물을 줄\n가족에게 동의를 받아보세요")
                         .font(.system(size: 30, weight: .semibold))
-                        .lineSpacing(6)
+                        .lineSpacing(4)
                         .padding(.leading, 30)
                     Spacer()
                 }
-                .padding(.top, 76)
-                
+                .padding(.bottom, 12)
                 //Description
                 HStack {
                     Text("20개의 할 일을 완료하고, 은퇴 선물을 받아보세요")
@@ -51,7 +36,6 @@ struct View_4: View {
                         .padding(.leading, 30)
                     Spacer()
                 }
-                .padding(.top, 12)
                 .padding(.bottom, 88)
                 
                 //Sign
@@ -109,7 +93,8 @@ struct View_4: View {
                         }
                     )
                 }
-                .padding(.bottom, 20)
+                Spacer()
+                    .frame(height: 16)
                 
                 //Sign_Description
                 
@@ -120,7 +105,6 @@ struct View_4: View {
                         .padding(.leading, 30)
                     Spacer()
                 }
-                .padding(.bottom, 112)
                 
                 //Button
                 NextButtonView()
@@ -135,9 +119,8 @@ struct View_4: View {
                             dbHelper.insertData(question: "\(questionData.questions[i])")
                         }
                     }
-                   
+                    .padding(.top, 112)
                 BottomCircleView(viewCount: 4)
-
                 
             }
             .ignoresSafeArea()

@@ -16,23 +16,15 @@ struct View_2: View {
     var body: some View {
         ZStack {
             Color.clear
+            
+            BackBottonView(viewController: viewController)
+                .offset(y:-361)
+                .zIndex(0)
+                
         
             VStack(spacing: 0) {
-        
-                HStack{
-                    Image(systemName: "chevron.backward")
-                        .foregroundColor(Color(hex: 0x979797))
-                        .padding(.leading, 14)
-                    Text("Back")
-                        .font(.system(size: 15))
-                        .foregroundColor(Color(hex: 0x979797))
-                    Spacer()
-                }
-                .frame(alignment: .leading)
-                .onTapGesture {
-                    viewController.currentPage -= 1
-                }
-                
+                Spacer()
+                    .frame(height:158)
                 HStack {
                     Text("은퇴일을 선택하세요")
                         .font(.system(size: 30))
@@ -40,7 +32,8 @@ struct View_2: View {
                         .padding(.leading, 30)
                     Spacer()
                 }
-                .padding(.top, 76)
+                Spacer()
+                    .frame(height:12)
                 
                 HStack {
                     Text("은퇴 100일 이내에 사용을 권장해요")
@@ -49,24 +42,23 @@ struct View_2: View {
                         .padding(.leading, 30)
                     Spacer()
                 }
-                .padding(.top, 12)
+                Spacer()
                 
                 DatePicker("date", selection: $date, in: Date()..., displayedComponents: .date)
                     .datePickerStyle(GraphicalDatePickerStyle())
                     .frame(width: 330, height: 355)
                     .accentColor(Color(hex: 0x139460))
                     .environment(\.locale, Locale.init(identifier: "ko"))
-                    .padding(.top, 59)
+                Spacer()
                 
                 NextButtonView()
                     .onTapGesture {
                         userInformation.date = date
                         viewController.currentPage += 1
                     }
-                    .padding(.top, 77)
                 BottomCircleView(viewCount: 2)
-//                Spacer()
-//                    .frame(height:53)
+                Spacer()
+                    .frame(height:52)
                 
             }
             .ignoresSafeArea()
