@@ -34,6 +34,7 @@
 		5E81BD712A072E6F00D77D38 /* MainView_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81BD702A072E6F00D77D38 /* MainView_2.swift */; };
 		5E81BD732A072E8100D77D38 /* Two_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81BD722A072E8100D77D38 /* Two_Button.swift */; };
 		5E81BD752A074B7700D77D38 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81BD742A074B7700D77D38 /* Database.swift */; };
+		5E9730EF2A0F6C8B00C362EB /* EffectsLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 5E9730EE2A0F6C8B00C362EB /* EffectsLibrary */; };
 		5EB0FA562A0789A7004E8BAC /* QuestionListRow_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0FA552A0789A7004E8BAC /* QuestionListRow_1.swift */; };
 		5EB0FA582A0799F9004E8BAC /* QuestionListRow_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0FA572A0799F9004E8BAC /* QuestionListRow_2.swift */; };
 		5ECBF4C62A0C8C5600652631 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECBF4C52A0C8C5600652631 /* LaunchScreenView.swift */; };
@@ -91,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E9730EF2A0F6C8B00C362EB /* EffectsLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +271,9 @@
 			dependencies = (
 			);
 			name = princess;
+			packageProductDependencies = (
+				5E9730EE2A0F6C8B00C362EB /* EffectsLibrary */,
+			);
 			productName = 6princess;
 			productReference = 5E8056FE29FA4F90006DF630 /* princess.app */;
 			productType = "com.apple.product-type.application";
@@ -297,6 +302,9 @@
 				Base,
 			);
 			mainGroup = 5E8056F529FA4F90006DF630;
+			packageReferences = (
+				5E9730ED2A0F6C8B00C362EB /* XCRemoteSwiftPackageReference "effects-library" */,
+			);
 			productRefGroup = 5E8056FF29FA4F90006DF630 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -488,17 +496,20 @@
 				DEVELOPMENT_TEAM = C3U3CZ666D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "princess-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sangyong.princess;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sangyong.sixprincess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -517,17 +528,20 @@
 				DEVELOPMENT_TEAM = C3U3CZ666D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "princess-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sangyong.princess;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sangyong.sixprincess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -557,6 +571,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5E9730ED2A0F6C8B00C362EB /* XCRemoteSwiftPackageReference "effects-library" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GetStream/effects-library";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5E9730EE2A0F6C8B00C362EB /* EffectsLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5E9730ED2A0F6C8B00C362EB /* XCRemoteSwiftPackageReference "effects-library" */;
+			productName = EffectsLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5E8056F629FA4F90006DF630 /* Project object */;
 }

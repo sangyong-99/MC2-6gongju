@@ -113,8 +113,8 @@ struct View_4: View {
                     
                     dbHelper.deleteTable(tableName: "myTable")
                     dbHelper.createTable()
-                    for i in 1...100 {
-                        dbHelper.insertData(question: "\(i)번째 질문")
+                    for i in 0..<100 {
+                        dbHelper.insertData(question: "\(questionData.questions[i])")
                     }
                 }
             Spacer()

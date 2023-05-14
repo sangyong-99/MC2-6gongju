@@ -7,9 +7,9 @@
 import SwiftUI
 import EffectsLibrary
 
- struct CompleteModalView: View {
-     @StateObject var userInformation: UserInformation
-     @StateObject var questiondata: QuestionData
+  struct CompleteModalView: View {
+      @StateObject var userInformation: UserInformation
+      @StateObject var questiondata: QuestionData
 
      var body: some View {
          ZStack {
@@ -18,10 +18,10 @@ import EffectsLibrary
                  .resizable()
                  .aspectRatio(contentMode: .fit)
              
-             ConfettiView()
+              ConfettiView()
 
-             VStack (spacing: 0){
-                 Text("\(userInformation.name)")
+              VStack (spacing: 0){
+                  Text("\(userInformation.name)")
                      .bold()
                      .font(.system(size: 24))
                      .foregroundColor(.white)
@@ -51,8 +51,6 @@ import EffectsLibrary
                  
                  Spacer()
                      .frame(height: 20)
-
-
                  ZStack {
                      Rectangle()
                          .cornerRadius(22)
@@ -68,7 +66,6 @@ import EffectsLibrary
          }
      }
  }
-
  struct CompleteModalView_Previews: PreviewProvider {
      static var previews: some View {
          CompleteModalView(userInformation: UserInformation(), questiondata: QuestionData())

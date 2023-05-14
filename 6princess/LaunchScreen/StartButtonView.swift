@@ -13,7 +13,7 @@ struct StartButtonView: View {
             Rectangle()
                 .frame(width: 329, height: 44)
                 .cornerRadius(22)
-                .foregroundColor(Color(hex: 0x17B978))
+                .foregroundColor(Color(hex: 0x139460))
             Text("은퇴잉 시작하기")
                 .font(.system(size: 16, weight: .bold))
                 .foregroundColor(.white)
