@@ -26,8 +26,8 @@ struct ReceiptView: View {
                         .resizable()
                         .frame(width: 277, height: 532.58)
                     VStack(spacing: 0){
-                        //         if let image = userInformation.image {
-                        if let image = UIImage(named: "1"){
+                                 if let image = userInformation.image {
+//                        if let image = UIImage(named: "1"){
                             Image(uiImage: image)
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)

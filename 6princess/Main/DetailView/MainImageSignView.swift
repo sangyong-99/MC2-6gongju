@@ -28,8 +28,8 @@ struct MainImageSignView: View {
                     .overlay(){
                         ZStack {
                             if imageSignView{
-                                Image(uiImage: image!)    //연습용
-                                //                                        Image(uiImage: userInformation.image!)      //실전용
+//                                Image(uiImage: image!)    //연습용
+                                                                        Image(uiImage: userInformation.image!)      //실전용
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 329, height: 219)
@@ -42,8 +42,8 @@ struct MainImageSignView: View {
                                             VStack{
                                                 Spacer()
                                                 VStack{
-                                                    Text(productName)         //연습용
-                                                    //                                                        Text(userInformation.productName)   //실전용
+//                                                    Text(productName)         //연습용
+                                                                                                            Text(userInformation.productName)   //실전용
                                                         .font(.system(size: 15, weight: .semibold))
                                                     Text("\(day_print())")
                                                         .font(.system(size: 12, weight: .semibold))
@@ -77,8 +77,8 @@ struct MainImageSignView: View {
                                         VStack{
                                             Spacer()
                                             VStack{
-                                                Text(productName)         //연습용
-                                                //                                                        Text(userInformation.productName)   //실전용
+//                                                Text(productName)         //연습용
+                                                                                                        Text(userInformation.productName)   //실전용
                                                     .font(.system(size: 15, weight: .semibold))
                                                 Text("\(day_print())")
                                                     .font(.system(size: 12, weight: .semibold))
