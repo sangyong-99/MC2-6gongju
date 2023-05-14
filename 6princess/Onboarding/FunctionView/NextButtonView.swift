@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct NextButtonView: View {
-    @State var viewCount: Int?
     var body: some View {
         ZStack {
             VStack(spacing: 0){
-                
                 ZStack {
                     Rectangle()
                         .frame(width: 329, height: 44)
@@ -22,28 +20,14 @@ struct NextButtonView: View {
                         .font(.system(size: 16, weight: .bold))
                         .foregroundColor(.white)
                 }
-                .padding(.bottom, 24)
-                
-                HStack(spacing: 10) {
-                    Circle()
-                        .frame(width: 8, height: 8)
-                    .foregroundColor(viewCount == 1 ? Color(hex: 0x139460) : Color(hex: 0xB2B2B2))
-                    Circle()
-                        .frame(width: 8, height: 8)
-                        .foregroundColor(viewCount == 2 ? Color(hex: 0x139460) : Color(hex: 0xB2B2B2))
-                    Circle()
-                        .frame(width: 8, height: 8)
-                        .foregroundColor(viewCount == 3 ? Color(hex: 0x139460) : Color(hex: 0xB2B2B2))
-                    Circle()
-                        .frame(width: 8, height: 8)
-                        .foregroundColor(viewCount == 4 ? Color(hex: 0x139460) : Color(hex: 0xB2B2B2))
-                }
+                Spacer()
+                    .frame(height: 24)
                 
             }
-            
         }
     }
 }
+
 
 
 struct NextButtonView_Previews: PreviewProvider {

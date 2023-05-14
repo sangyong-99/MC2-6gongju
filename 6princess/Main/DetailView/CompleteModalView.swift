@@ -1,24 +1,35 @@
 //
-//   CompleteModalView.swift
-//   princess
-//
-//   Created by jaelyung kim on 2023/05/11.
-//
-import SwiftUI
-import EffectsLibrary
+ //   CompleteModalView.swift
+ //   princess
+ //
+ //   Created by jaelyung kim on 2023/05/11.
+ //
+ import SwiftUI
+ import EffectsLibrary
 
   struct CompleteModalView: View {
       @StateObject var userInformation: UserInformation
       @StateObject var questiondata: QuestionData
 
-     var body: some View {
-         ZStack {
-             Color.clear
-             Image("complete")
-                 .resizable()
-                 .aspectRatio(contentMode: .fit)
-             
-              ConfettiView()
+      var body: some View {
+          ZStack {
+              Color.clear
+              Image("complete")
+                  .resizable()
+                  .aspectRatio(contentMode: .fit)
+
+              ConfettiView(
+                config: ConfettiConfig(
+                content: [
+                    .emoji("🎁", 0.7),
+                    .emoji("🎉", 0.7)
+                ],
+                intensity: .medium,
+                lifetime: .long,
+                initialVelocity: .fast,
+                fadeOut: .slow
+            ))
+              
 
               VStack (spacing: 0){
                   Text("\(userInformation.name)")
@@ -31,7 +42,7 @@ import EffectsLibrary
                  
                  Spacer()
                      .frame(height: 14)
-                 if (questiondata.completeQuestionCount == 100) {
+                 if (questiondata.completeQuestionCount == 20) {
                      Text("\(questiondata.completeQuestionCount)")
                          .font(.system(size: 14))
                          .foregroundColor(.white)

@@ -20,7 +20,7 @@ struct MainView: View {
                 .padding(.bottom, 10)
 //            Spacer()
             if viewController.viewSelection {
-                if questiondata.completeQuestionCount != 100{
+                if questiondata.completeQuestionCount != 20{
                     MainView_1(questiondata: questiondata)
                 }
                 else {

@@ -44,6 +44,7 @@
 		5EE00B5A2A04C96600A53D56 /* UserDefaultsDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE00B592A04C96600A53D56 /* UserDefaultsDataView.swift */; };
 		5EE00B5D2A04CA1400A53D56 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE00B5C2A04CA1400A53D56 /* Error.swift */; };
 		5EE00B7D2A055C1A00A53D56 /* databaseview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE00B7C2A055C1A00A53D56 /* databaseview.swift */; };
+		7DAC664A2A107F55000A0FF9 /* BottomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAC66492A107F55000A0FF9 /* BottomCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		5EE00B5C2A04CA1400A53D56 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		5EE00B7B2A05545300A53D56 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		5EE00B7C2A055C1A00A53D56 /* databaseview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = databaseview.swift; sourceTree = "<group>"; };
+		7DAC66492A107F55000A0FF9 /* BottomCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		5E42C67D2A049CAB00CC84C7 /* FunctionView */ = {
 			isa = PBXGroup;
 			children = (
+				7DAC66492A107F55000A0FF9 /* BottomCircleView.swift */,
 				5E42C67B2A049C8C00CC84C7 /* ImagePickerView.swift */,
 				5E42C6692A03FCE100CC84C7 /* NextButtonView.swift */,
 			);
@@ -342,6 +345,7 @@
 				5E42C66C2A0402CE00CC84C7 /* Color_extension.swift in Sources */,
 				5EE00B5A2A04C96600A53D56 /* UserDefaultsDataView.swift in Sources */,
 				5E42C6802A049D0400CC84C7 /* ImagePicker.swift in Sources */,
+				7DAC664A2A107F55000A0FF9 /* BottomCircleView.swift in Sources */,
 				5E42C67A2A04907300CC84C7 /* StartView.swift in Sources */,
 				5E80570229FA4F90006DF630 /* _princessApp.swift in Sources */,
 				5EB0FA582A0799F9004E8BAC /* QuestionListRow_2.swift in Sources */,
