@@ -11,18 +11,16 @@ struct MainView_3: View {
     @StateObject var userInformation: UserInformation
     @StateObject var viewController: ViewController
     var body: some View {
-//        Rectangle()
-//            .foregroundColor(Color.red)
-//            .frame(width: 300, height: 386)
         VStack(spacing: 0){
             HStack {
-                Text("\(userInformation.name)님의 은퇴를 진심으로 축하드립니다.\n당신이 달려온 시간들과 노력이 참으로 존경스럽습니다.\n앞으로 걸어가시는 길이 아름다운 꽃길이 되시길\n은퇴잉이 응원합니다.")
-                    .font(.system(size: 15, weight: .semibold))
-                .lineSpacing(30)
-                .padding(.leading, 30)
+                HStack {
+                    Text("\(userInformation.name)").fontWeight(.heavy) + Text("님의 은퇴를 진심으로 축하드립니다.\n\n당신이 달려온 시간들과 노력이 참으로 존경스럽습니다.\n\n앞으로 걸어가시는 길이 아름다운 꽃길이 되시길 은퇴잉이 응원합니다.").fontWeight(.medium)
+                }.font(.system(size: 19))
+                .lineSpacing(3)
                 Spacer()
             }
-            .padding(.top, 30)
+            .padding([.top, .leading], 30)
+            .padding(.trailing, 15)
             
             Spacer()
                 .frame(height: 67)
