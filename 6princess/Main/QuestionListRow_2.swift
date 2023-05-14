@@ -22,9 +22,12 @@ struct QuestionListRow_2: View {
                     .foregroundColor(Color(hex: 0x139460))
                     .onTapGesture {
                         dbHelper.updateData(id: model.id, complete: 0)
-                        questiondata.viewresetcount += 1
-                        questiondata.completeQuestionCount -= 1
-                        UserDefaults.standard.set(questiondata.completeQuestionCount, forKey: "completeQuestionCount")
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+                            questiondata.viewresetcount += 1
+                            questiondata.completeQuestionCount -= 1
+                            UserDefaults.standard.set(questiondata.completeQuestionCount, forKey: "completeQuestionCount")
+                        }
+                        
                     }
                     .frame(width: 22, height: 22)
                 Text(model.question)
@@ -38,6 +41,7 @@ struct QuestionListRow_2: View {
         .padding(.bottom, 1)
         .padding(.leading, 30)
         .padding(.trailing, 14)
+        .animation(.easeInOut(duration: 0.7), value: questiondata.viewresetcount)
     }
     
 }
