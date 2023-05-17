@@ -56,8 +56,9 @@ struct LaunchScreenView: View {
                     StartButtonView()
                         .padding(.top, 30)
                         .onTapGesture {
-                            UserDefaults.standard.set(true, forKey: "setting")
-                            viewController.currentPage  = 2
+//                            UserDefaults.standard.set(true, forKey: "setting")
+//                            viewController.currentPage  = 2
+                            viewController.currentPage += 1
                         }
                 }
                 Spacer()
