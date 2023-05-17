@@ -28,32 +28,32 @@ struct MainImageSignView: View {
                     .overlay(){
                         ZStack {
                             if imageSignView{
-//                                Image(uiImage: image!)    //연습용
-                                                                        Image(uiImage: userInformation.image!)      //실전용
+                                //                                Image(uiImage: image!)    //연습용
+                                Image(uiImage: userInformation.image!)      //실전용
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 329, height: 219)
                                     .shadow(color: Color(hex: 0xD1D1D6), radius: 1, x: 0, y: 2)
                                     .cornerRadius(20)
                                     .clipped()
-//                                    .overlay(){
-//                                        HStack {
-//                                            Spacer()
-//                                            VStack{
-//                                                Spacer()
-//                                                VStack{
-////                                                    Text(productName)         //연습용
-//                                                                                                            Text(userInformation.productName)   //실전용
-//                                                        .font(.system(size: 15, weight: .semibold))
-//                                                    Text("\(day_print())")
-//                                                        .font(.system(size: 12, weight: .semibold))
-//                                                        .foregroundColor(Color(hex: 0xC7C7CC))
-//                                                }
-//                                                .padding(.trailing, 35.87)
-//                                                .padding(.bottom, 6.07)
-//                                            }
-//                                        }
-//                                    }
+                                //                                    .overlay(){
+                                //                                        HStack {
+                                //                                            Spacer()
+                                //                                            VStack{
+                                //                                                Spacer()
+                                //                                                VStack{
+                                ////                                                    Text(productName)         //연습용
+                                //                                                                                                            Text(userInformation.productName)   //실전용
+                                //                                                        .font(.system(size: 15, weight: .semibold))
+                                //                                                    Text("\(day_print())")
+                                //                                                        .font(.system(size: 12, weight: .semibold))
+                                //                                                        .foregroundColor(Color(hex: 0xC7C7CC))
+                                //                                                }
+                                //                                                .padding(.trailing, 35.87)
+                                //                                                .padding(.bottom, 6.07)
+                                //                                            }
+                                //                                        }
+                                //                                    }
                                 
                                 
                             }
@@ -77,12 +77,12 @@ struct MainImageSignView: View {
                                         VStack{
                                             Spacer()
                                             VStack{
-//                                                Text(productName)         //연습용
-                                                                                                        Text(userInformation.productName)   //실전용
+                                                //                                                Text(productName)         //연습용
+                                                Text(userInformation.productName)   //실전용
                                                     .font(.system(size: 15, weight: .semibold))
                                                 Text("\(day_print())")
                                                     .font(.system(size: 12, weight: .semibold))
-                                                    
+                                                
                                             }
                                             .padding(.trailing, 35.87)
                                             .padding(.bottom, 6.07)
